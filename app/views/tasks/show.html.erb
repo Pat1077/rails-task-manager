@@ -1,0 +1,7 @@
+  <h2><%= @task.title %></h2>
+  <p><%= @task.details %></p>
+  <input name=name id=id_completed type=checkbox <%=
+   @task.completed == true ? 'checked' : ''
+    %>>
+  <%= link_to "Update task", edit_task_path(@task) %>
+  <%= link_to "DELETE TASK", task_path(@task), method: :delete %>
